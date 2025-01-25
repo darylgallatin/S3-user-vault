@@ -1,0 +1,209 @@
+/* Background for the Register Page */
+.register-page {
+    background: linear-gradient(to right, #74a6d8, #347cc5); /* Light blue gradient */
+}
+
+/* Background for the Users Page */
+.users-page {
+    background: linear-gradient(to right, #38aebd, #1775a7); /* Light gray gradient */
+}
+
+
+/* General Button Styling */
+.custom-button {
+    margin-right: 10px; /* Add spacing between buttons */
+    padding: 10px 20px; /* Balanced size */
+    border: 2px solid transparent; /* Default border */
+    border-radius: 10px; /* Rounded corners */
+    font-weight: bold; /* Bold text */
+    font-size: 14px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(244, 241, 241); /* Default text color */
+    cursor: pointer;
+    
+    
+}
+
+/* Hover Effect for General Buttons */
+.custom-button:hover {
+    border-color: black; /* Black outline on hover */
+}
+
+/* Specific Button Colors */
+.custom-delete {
+    background-color: rgb(227, 54, 51);
+   
+}
+
+.custom-delete:hover {
+    background-color: rgb(200, 50, 5); /* Darker red on hover */
+}
+
+.custom-backup {
+    background-color: rgb(68, 150, 45);
+}
+
+.custom-backup:hover {
+    background-color: rgb(50, 120, 30); /* Darker green on hover */
+}
+
+.custom-restore {
+    background-color: rgb(68, 150, 45);
+}
+
+.custom-restore:hover {
+    background-color: rgb(50, 120, 30); /* Darker green on hover */
+}
+
+.custom-reorder {
+    background-color: rgb(138, 58, 209);
+}
+
+.custom-reorder:hover {
+    background-color: rgb(125, 102, 209); /* Slightly darker purple */
+}
+
+.custom-back-to-register {
+    background-color: rgb(40, 167, 69); /* Green */
+}
+
+.custom-back-to-register:hover {
+    background-color: rgb(30, 120, 50); /* Darker green */
+    transform: scale(1.03); /* Slight zoom effect */
+}
+
+/* Button Wrapper for Alignment */
+.button-wrapper {
+    max-width: 600px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+
+/*register page buttons */
+
+.custom-register {
+    background-color: rgb(40, 167, 69); /* Green */
+    line-height: normal;
+}
+
+.custom-view-users {
+    background-color: rgb(60, 126, 225); /* Green */
+}
+
+
+
+
+.custom-register:hover {
+    background-color: rgb(30, 120, 50); /* Darker green on hover */
+    transform: scale(1.03); /* Slight zoom effect */
+}
+ 
+.custom-view-users:hover {
+    background-color: rgb(0, 105, 217); /* Darker blue on hover */
+    transform: scale(1.03); /* Slight zoom effect */
+}
+
+
+/* colum headers on the user form */
+div.active {
+    font-weight: bold;
+    text-decoration: underline;
+    
+    color: rgb(57, 107, 215) important; 
+}
+
+
+/* General box styling for the id field column for the user list display */
+.col-box-id {
+    background-color: rgba(156, 136, 136, 0.743); /* Light gray background for each field */
+    border: 2px solid #f43535; /* red border around each field */
+    border-radius: 15px; /* Optional: Rounded corners */
+    padding: 5px 10px; /* Add padding inside the fields */
+    text-align: left; /* Align text to the left */
+}
+
+
+/* General box styling for columns other than id field  (the input fields for the user list display */
+.col-box {
+    background-color: rgba(241, 214, 214, 0.743); /* Light gray background for each field */
+    border: 3px solid #37143f; /* red border around each field */
+    border-radius: 15px; /* Optional: Rounded corners */
+    padding: 5px 10px; /* Add padding inside the fields */
+    text-align: left; /* Align text to the left */
+}
+
+
+
+.column-header {
+    font-weight: bold;
+    color: rgb(114, 114, 217); /* Light blue color */
+}
+
+
+
+
+/* Adjust spacing between boxes */
+.d-flex .col-box {
+    margin-right: 10px; /* Space between fields in a row */
+}
+
+/* Hover effect for visual feedback */
+.col-box:hover {
+    border-color: #007bff; /* Blue border on hover */
+}
+
+
+
+
+
+/*for spacing between user list and buttons on user.html form */
+.button-container {
+    margin-bottom: 60px; /* Adjust spacing as needed */
+}
+
+
+
+/* General box styling for the user, email and password input fields on registration forme(the input fields for the user lsit display */
+.col-box-reg {
+    background-color: rgba(241, 214, 214, 0.743); /* Light gray background for each field */
+    border: 3px solid #37143f; /* red border around each field */
+    border-radius: 15px; /* Optional: Rounded corners */
+    padding: 5px 10px; /* Add padding inside the fields */
+    text-align: left; /* Align text to the left */
+}
+
+.col-box-pwd {
+    background-color: rgba(241, 214, 214, 0.743); /* Light gray background for each field */
+    border: 3px solid #37143f; /* red border around each field */
+    border-radius: 15px; /* Optional: Rounded corners */
+    padding: 5px 10px; /* Add padding inside the fields */
+    text-align: left; /* Align text to the left */
+}
+
+.col-box-notes {
+    background-color: rgba(241, 214, 214, 0.743); /* Light gray background for each field */
+    border: 3px solid #37143f; /* red border around each field */
+    border-radius: 15px; /* Optional: Rounded corners */
+    padding: 5px 10px; /* Add padding inside the fields */
+    text-align: left; /* Align text to the left */
+}
+
+
+.field-headers-reg-form
+{color: rgb(15, 55, 199); 
+ font-family: Arial, sans-serif;
+ font-size: 20px; /* Text size */
+ font-weight: bold; /* Bold text */
+}
+
+/* Hover effect for visual feedback */
+.col-box-reg:hover {
+    border-color: #007bff; /* Blue border on hover */
+}
+.col-box-pwd:hover {
+    border-color: #007bff; /* Blue border on hover */
+}
+.col-box-notes:hover {
+    border-color: #007bff; /* Blue border on hover */
+}
