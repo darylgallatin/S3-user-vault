@@ -33,6 +33,10 @@
         .modal-body {
             font-size: 1rem; /* Adjust modal message font size */
         }
+
+        #bucket-select {
+            appearance: auto; /* Ensures dropdown arrow displays across browsers */
+        }
     </style>
 </head> 
 
@@ -86,24 +90,47 @@
             </div>
         </form>
     
-        <!-- S3 Bucket Name Field and Save Button -->
-        <div class="col-md-2">
+        <div class="col-md-4">
             <form id="s3-bucket-form" class="d-flex flex-column">
+                <!-- S3 Bucket Name Label and Current Bucket -->
                 <div class="d-flex align-items-center mb-2" style="gap: 10px;">
                     <label for="s3_bucket" class="form-label field-headers-reg-form mb-1">
-                        S3 Bucket Name: 
+                        S3 Bucket Name:
                     </label>
-                    <span id="current-bucket-name" style="width: 10px; font-size: 20px;   font-family: 'Courier New', Courier, monospace; color: blueviolet; font-weight: bold;">None</span>
+                    <span id="current-bucket-name" style="width: auto; font-size: 16px; font-family: 'Courier New', Courier, monospace; color: blueviolet; font-weight: bold;">None</span>
                 </div>
-                <input type="text" id="s3_bucket" name="s3_bucket" class="form-control col-box-reg mb-2" required placeholder="Enter bucket name">
-                <button type="submit" class="btn custom-button custom-register">Save Bucket Name</button>
+        
+                <!-- Dropdown for existing buckets -->
+                <label for="bucket-select" class="form-label">Select Existing Bucket:</label>
+                <select id="bucket-select" class="form-control col-box-reg mb-2">
+                    <option value="" disabled selected>Select a bucket</option>
+                    <!-- Options dynamically populated via JS -->
+                </select>
+        
+                <!-- Input field for new bucket name -->
+                <label for="new-bucket-name" class="form-label">Or Create a New Bucket:</label>
+                <input type="text" id="new-bucket-name" class="form-control col-box-reg mb-2" placeholder="Enter new bucket name">
+        
+                <!-- Button for creating a new bucket -->
+                <button type="button" id="create-bucket-btn" class="btn custom-button custom-register mb-2">Create Bucket</button>
+        
+                <!-- Save Bucket Button 
+                <button type="submit" class="btn custom-button custom-register">Save Bucket Name</button> -->
             </form>
+        </div>
+        
         </div>
     </div>
     
 
     <!-- Navigation Button -->
     <button class="btn custom-button custom-view-users" onclick="window.location.href='/users';">View Users</button>
+
+
+  
+
+    
+
 </body>
 
 

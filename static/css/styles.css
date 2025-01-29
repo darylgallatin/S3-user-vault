@@ -207,3 +207,9 @@ div.active {
 .col-box-notes:hover {
     border-color: #007bff; /* Blue border on hover */
 }
+
+
+
+#bucket-select {
+    appearance: auto; /* Ensures dropdown arrow displays across browsers */
+}

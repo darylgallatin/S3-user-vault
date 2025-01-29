@@ -18,7 +18,7 @@
 <body class="users-page container py-3">
     <h1 class="mb-4"  style="color: rgb(26, 60, 213); font-weight: bold; font-family: Arial, sans-serif;">Users List</h1>
 
-    <div style="max-width: 1400px;">
+    <div style="max-width: 2200px;">
         <!-- Column Headers -->
         <div class="d-flex gap-10 align-items-center py-2 fw-bold border-bottom">
             <div class="me-2  {{ 'active' if request.args.get('sort') == 'id' else '' }}" style="width: 50px; text-align: left;">
@@ -33,39 +33,36 @@
             <div class="me-2  {{ 'active' if request.args.get('sort') == 'phone' else '' }}"  style="width: 150px; text-align: left;">
                 <a href="?sort=phone">PHONE</a>
             </div>
-            <div style="width: 250px; text-align: center;">NOTES</div>
+            <div style="width: 400px; text-align: center;">NOTES</div>
         </div>
     </div>
 
     <!--User List: Left-Aligned -->
-    <div style="max-width: 1400px;">
+    <div style="max-width: 2000px;">
         {% for user in users %}
-            <form id="user-form-{{ user.id }}" class="d-flex align-items-center py-2">
-                <!-- ID Column (Read-Only) -->
-                <div class="col-box-id me-2" style="width: 50px; text-align: right;">
-                    <strong>{{ user.id }}</strong>
-                </div>
-    
-                <!-- Username Column (Editable) -->
-                <input type="text" name="username" value="{{ user.username }}" 
-                       class="form-control col-box me-2" style="width: 150px; text-align: left;" />
-    
-                <!-- Email Column (Editable) -->
-                <input type="text" name="email" value="{{ user.email }}" 
-                       class="form-control col-box me-2" style="width: 250px; text-align: left;" />
-    
-                <!-- Phone Column (Editable) -->
-                <input type="text" name="phone" value="{{ user.phone }}" 
-                       class="form-control col-box me-2" style="width: 200px;" />
-    
-                <!-- Notes Column (Editable) -->
-                <input type="text" name="notes" value="{{ user.notes }}" 
-                       class="form-control col-box" style="width: 800px;" />
-    
-                <!-- Update Button -->
-                <button type="button" class="btn btn-primary ms-2 update-btn" 
-                        data-user-id="{{ user.id }}">Update</button>
-            </form>
+        <form id="user-form-{{ user.id }}" class="d-flex align-items-center py-2">
+            <!-- Existing fields like ID, username, email, phone, notes -->
+            <div class="col-box-id me-2" style="width: 50px; text-align: right;">
+                <strong>{{ user.id }}</strong>
+            </div>
+            <input type="text" name="username" value="{{ user.username }}" 
+                   class="form-control col-box me-2" style="width: 150px; text-align: left;" />
+            <input type="text" name="email" value="{{ user.email }}" 
+                   class="form-control col-box me-2" style="width: 250px; text-align: left;" />
+            <input type="text" name="phone" value="{{ user.phone }}" 
+                   class="form-control col-box me-2" style="width: 200px;" />
+            <input type="text" name="notes" value="{{ user.notes }}" 
+                   class="form-control col-box" style="width: 500px;" />
+            
+            <!-- Update Button -->
+            <button type="button" class="btn btn-primary ms-2 update-btn" 
+                    data-user-id="{{ user.id }}">Update</button>
+            
+            <!-- Sentiment Button -->
+            <button type="button" class="btn btn-info ms-2 analyze-sentiment-btn" 
+                    data-user-id="{{ user.id }}">Analyze Sentiment</button>
+        </form>
+        
         {% endfor %}
     </div>
     
