@@ -1,14 +1,14 @@
 # S3-user-vault
-A simple cloud-based web application for entering and managing user information. Though you can run it locally on your PC if you want, but right now you won't be able to save the database to your PC.  S3 bucket on AWS only.
+A simple cloud-based web application for entering and managing user information. Though you can run it locally on your PC if you want(it will do so if a bucket isn't detected when you try to save, but  right now you won't be able to load it back up locally.  S3 bucket on AWS only.
 
 ---
 
 ## Features
-- **User Registration**: Allows users to input their details, such as username, email, phone number, and notes also password even though thats not really used atm
+- **User Registration**: Allows users to input their details, such as username, email, phone number, and notee. Also a  password even though thats not really used atm for anything. I may even remove it
 - **User Management**: Displays a list of registered users that can be updated, deleted, reordered and notes added.
 - **S3 Integration**: Saves the user list to an S3 bucket and restores it when needed.
 - **Web UI**: Provides a CSS/Bootstrap-based frontend for interaction.
-- **Analyze Notes**.  A litle Machine learning added using  the torch library to anaylze teh notes and display the tone(Positiive, Neutral, Negative)  of the notes about the user.
+- **Analyze Notes**.  A litle Machine Learning added using  the torch library to anaylze the notes and display the tone(Positiive, Neutral, Negative)  of the notes about the user.
    
 
 ---
@@ -78,7 +78,7 @@ When creating the EC2 instance or afterward:
 
 #################################################################################################
     NOTE!! t2.micro instance barely runs this program and often locks up within a few minutes. 
-           I recomned using  at least a t2.medium   2 CPU 4G of RAM to run this
+           I recommend using  at least a t2.medium   2 CPU 4G of RAM to run this
 #################################################################################################
 
 To add these rules:
