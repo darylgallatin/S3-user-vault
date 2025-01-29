@@ -4,10 +4,12 @@ A simple cloud-based web application for entering and managing user information.
 ---
 
 ## Features
-- **User Registration**: Allows users to input their details, such as username, email, phone number, and notes.
-- **User Management**: Displays a list of registered users that can be updated, deleted, or reordered.
+- **User Registration**: Allows users to input their details, such as username, email, phone number, and notes also password even though thats not really used atm
+- **User Management**: Displays a list of registered users that can be updated, deleted, reordered and notes added.
 - **S3 Integration**: Saves the user list to an S3 bucket and restores it when needed.
 - **Web UI**: Provides a CSS/Bootstrap-based frontend for interaction.
+- **Analyze Notes**.  A litle Machine learning added using  the torch library to anaylze teh notes and display the tone(Positiive, Neutral, Negative)  of the notes about the user.
+   
 
 ---
 
@@ -23,9 +25,12 @@ libaries needed
 Flask 3.1.0
 boto3 1.36.1
 Flask-SQLAlchemy 3.1.1
+torch
+transformers
 
 
-AS of this version, you'll need to create the S3 bucket ahead of time and make sure the EC2 has access to it by adding a pllicy to it. 
+AS of this version, application updated to include  allowing you to create an s3 bucket but only for the default region  for now
+Make sure the EC2 has access to it by adding a policy to it. 
 When creating the EC2 instance or afterward:
 
     Allow HTTP Access:
@@ -70,6 +75,12 @@ When creating the EC2 instance or afterward:
             Port Range: 5000
             Source: Anywhere (0.0.0.0/0) or restrict to specific IPs.
 
+
+#################################################################################################
+    NOTE!! t2.micro instance barely runs this program and often locks up within a few minutes. 
+           I recomned using  at least a t2.medium   2 CPU 4G of RAM to run this
+#################################################################################################
+
 To add these rules:
 
     Go to the AWS Management Console.
@@ -90,6 +101,8 @@ To allow your Flask application to interact with S3:
         Search for AmazonS3FullAccess (or a custom policy with limited S3 permissions).
         Attach the policy.
     Complete the role creation process.
+    
+    S3 creation in the web app is done for Region 1 only. 
 
 3. Attach IAM Role to the EC2 Instance
 
