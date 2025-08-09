@@ -1,18 +1,16 @@
 # S3-user-vault
-A simple cloud-based web application for entering and managing user information. Though you can run it locally on your PC if you want(it will do so if a bucket isn't detected when you try to save, but  right now you won't be able to load it back up locally.  S3 bucket on AWS only.
+A lightweight, cloud-ready web application for storing and managing user information, with optional machine learning features. Designed for AWS S3 integration but can run locally with limited functionality.
 
 ---
 
 ## Features
-- **User Registration**: Allows users to input their details, such as username, email, phone number, and notee. Also a  password even though thats not really used atm for anything. I may even remove it
-- **User Management**: Displays a list of registered users that can be updated, deleted, reordered and notes added.
-- **S3 Integration**: Saves the user list to an S3 bucket and restores it when needed.
-- **Web UI**: Provides a CSS/Bootstrap-based frontend for interaction.
-- **Analyze Notes**.  A litle Machine Learning added using  the torch library to anaylze the notes and display the tone(Positiive, Neutral, Negative)  of the notes about the user.
-   
+- **User Registration**: Add details such as username, email, phone number, and notes. A password field exists but is currently unused and may be removed.
+- **User Management**: View, update, delete, reorder users, and add notes.
+- **AWS S3 Integration**: Automatically saves and loads the user list to and from an S3 bucket.
+- **Web Interface**: Responsive CSS/Bootstrap-based UI for easy interaction.
+- **Sentiment Analysis**: Uses PyTorch with a pre-trained BERT model to determine the tone of user notes (Positive, Neutral, Negative).
 
 ---
-
 
 ## Prerequisites
 To run this program, you need:
