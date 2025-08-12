@@ -12,6 +12,7 @@ A lightweight, cloud-ready web application for storing and managing user informa
 - **AWS S3 Integration**: Automatically saves and loads the user list to and from an S3 bucket.
 - **Web Interface**: Responsive CSS/Bootstrap-based UI.
 - **Sentiment Analysis**: Uses PyTorch with a pre-trained BERT model to determine the tone of user notes *(Positive, Neutral, Negative)*.
+- Data is is stored in a simple SQL database
 
 ---
 
